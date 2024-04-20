@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Toj.Importante"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             Title="Importante">
+    <VerticalStackLayout Spacing="20"
+            Padding="25"
+            VerticalOptions="Center" HorizontalOptions="Center">
+
+        <!-- alerta JSON-->
+
+        <Image Source="alerta.jpg" WidthRequest="150"/>
+
+                    <Label
+                Text="Importante"
+                FontSize="30"
+                HorizontalOptions="Center"
+                FontFamily="Nunito"
+                HorizontalTextAlignment="Center"/>
+
+            <Label
+                Text="En Tojóol utilizamos tus datos relacionados con la salud para ofrecerte nuestros servicios personalizados, el uso de la aplicación no sustituye a su médico."
+                FontSize="18"
+                FontFamily="Nunito"
+                TextType="Text"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                Padding="7"/>
+
+            <Label
+                Text="Consulte con su médico antes de comenzar una nueva dieta."
+                FontSize="18"
+                HorizontalOptions="Center"
+                FontFamily="Nunito"
+                HorizontalTextAlignment="Center"/>
+
+            <Button
+                Text="Estoy de acuerdo"
+                FontFamily="Nunito"
+                FontSize="16"
+                Padding="50, 10"
+                BackgroundColor="#6eb6f9"
+                FontAttributes="Bold"
+                Clicked="Button_Clicked"/>
+
+            <Label
+                Text="Al pulsar 'Estoy de acuerdo' acepta el uso de sus datos personales, términos y condiciones."
+                FontSize="15"
+                HorizontalOptions="Center"
+                FontFamily="Nunito"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center"/>
+
+    </VerticalStackLayout>
+</ContentPage>

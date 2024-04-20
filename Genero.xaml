@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Toj.Genero"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             Title="Genero">
+    
+<Grid RowDefinitions=".1*, .3*, .2*, .2*, .2*">
+
+        <!-- Arreglar la Progress Bar -->
+        
+        <ProgressBar Progress="0.14" WidthRequest="250" ProgressColor="#6eb6f9" VerticalOptions="StartAndExpand" Margin="20"/>
+
+
+                <Image Source="genero" WidthRequest="180" Grid.Row="1" Margin="0,40,0,0"/>
+
+                <Label Text="Genero"
+                       HorizontalOptions="Center"
+                       FontSize="25"
+                       FontFamily="Nunito"
+                       Grid.Row="2" Margin="30"
+                       x:Name="hola"/>
+
+            <HorizontalStackLayout RadioButtonGroup.GroupName="Sexo"
+                                   VerticalOptions="Center"
+                                   Spacing="20"
+                                   HorizontalOptions="Center"
+                                   Grid.Row="3"
+                                   Margin="0,-200,0,0">
+
+            <BindableLayout.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                         <x:String>Masculino</x:String>
+                         <x:String>Femenino</x:String>
+                </x:Array>
+
+            </BindableLayout.ItemsSource >
+
+                <BindableLayout.ItemTemplate>
+
+                <DataTemplate >
+
+                    <RadioButton Content="{Binding .}" x:Name="RadioButton" CheckedChanged="RadioButton_CheckedChanged">
+
+                        <RadioButton.ControlTemplate>
+
+                            <ControlTemplate>
+                                <Grid>
+
+
+                                    <Border x:Name="Container"
+                                            Stroke="#6eb6f9"
+                                            WidthRequest="150"
+                                            HeightRequest="80"
+                                            Grid.Row="3">
+
+                                        <Border.StrokeShape>
+                                            <RoundRectangle CornerRadius="10,10,10,10"/>
+                                        </Border.StrokeShape>
+
+                                        <Label x:Name="TextLabel"
+                                               HorizontalOptions="Center"
+                                               Text="{TemplateBinding Content}"
+                                               VerticalOptions="Center"
+                                               FontSize="20"
+                                               FontFamily="Nunito"
+                                               FontAttributes="Bold"/>
+                                        </Border>
+
+                                    <VisualStateManager.VisualStateGroups>
+                                        <VisualStateGroupList>
+                                            <VisualStateGroup x:Name="CheckedStates">
+                                                <VisualState x:Name="Checked">
+                                                    <VisualState.Setters>
+
+                                                        <Setter TargetName="TextLabel" Property="Label.TextColor" Value="White"/>
+                                                        <Setter TargetName="Container" Property="Border.BackgroundColor" Value="#6eb6f9"/>
+                                                        <Setter TargetName="Container" Property="Border.Stroke" Value="White"/>
+
+                                                    </VisualState.Setters>
+                                                </VisualState>
+
+                                                <VisualState x:Name="Unchecked">
+                                                    <VisualState.Setters>
+
+                                                        <Setter TargetName="TextLabel" Property="Label.TextColor" Value="#6eb6f9"/>
+                                                        <Setter TargetName="Container" Property="Border.BackgroundColor" Value="white"/>
+                                                        <Setter TargetName="Container" Property="Border.Stroke" Value="#6eb6f9"/>
+
+                                                    </VisualState.Setters>
+                                                </VisualState>
+
+                                            </VisualStateGroup>
+
+                                        </VisualStateGroupList>
+
+                                    </VisualStateManager.VisualStateGroups>
+                                </Grid>
+
+                            </ControlTemplate>
+
+                        </RadioButton.ControlTemplate>
+                    </RadioButton>
+
+                </DataTemplate>
+
+            </BindableLayout.ItemTemplate>
+
+        </HorizontalStackLayout>
+                                    <ImageButton Source="flechazo" 
+                             HeightRequest="150"
+                             WidthRequest="150"
+                             CornerRadius="30"
+                             BackgroundColor="White"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Padding="20"
+                             Clicked="ImageButton_Clicked"
+                             Grid.Row="4"
+                             Margin="20,-100,20,20"/>
+        </Grid>
+
+
+</ContentPage>

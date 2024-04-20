@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Toj.MainPage">
+
+<Grid RowDefinitions="*, *, Auto">
+    <VerticalStackLayout Margin="0,80,0,0">
+        <Image Source="pajaro.png" HeightRequest="220" WidthRequest="200"/>
+         <!--<Label Text="Logra tus objetivos de salud" FontSize="20" HorizontalTextAlignment="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Logra " FontSize="30" FontAttributes="Bold" TextColor="#6eb6f9"/> 
+                    <Span Text="tus objetivos de salud" FontSize="30" TextColor="#6eb6f9"/>
+
+                </FormattedString>
+
+            </Label.FormattedText>
+                </Label>-->
+        </VerticalStackLayout>
+        <VerticalStackLayout Grid.Row="1" Margin="40,40" Spacing="30">
+            <Button Text="EMPEZAR" HeightRequest="60"
+                    FontAttributes="Bold"
+                    FontSize="20"
+                    CornerRadius="15"
+                 TextColor="#6eb6f9"
+                    BorderColor="#6eb6f9" BorderWidth="2"
+                    Padding="20,10"
+                    FontFamily="Nunito"
+                    Clicked="Button_Clicked">
+                                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="BackgroundColor" Value="Transparent" />
+                        <Setter Property="VisualStateManager.VisualStateGroups">
+                            <VisualStateGroupList>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="Disabled"/>
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="#f1f8fe"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+                                    </Button>
+
+            <Button Text="INICIAR SESIÓN"
+                    FontAttributes="Bold"
+                    HeightRequest="60"
+                    FontSize="20"
+                    CornerRadius="15"
+                    TextColor="white"
+                    BorderColor="#6eb6f9"
+                    BorderWidth="2"
+                    Padding="20,10"
+                    FontFamily="Nunito">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Setter Property="BackgroundColor" Value="#6eb6f9"/>
+                        <Setter Property="VisualStateManager.VisualStateGroups">
+                            <VisualStateGroupList>
+                                <VisualStateGroup x:Name="CommonStates">
+                                    <VisualState x:Name="Normal"/>
+                                    <VisualState x:Name="Disabled"/>
+                                    <VisualState x:Name="Pressed">
+                                        <VisualState.Setters>
+                                            <Setter Property="BackgroundColor" Value="#7dbdfa"/>
+                                        </VisualState.Setters>
+                                    </VisualState>
+                                </VisualStateGroup>
+                            </VisualStateGroupList>
+                        </Setter>
+                    </Style>
+                </Button.Style>
+            </Button>
+
+        </VerticalStackLayout>
+
+        <Border Grid.Row="2" BackgroundColor="#6eb6f9" HeightRequest="130"
+                Stroke="#6eb6f9" StrokeThickness="1" Margin="-2">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="55,55,0,0"/>
+
+            </Border.StrokeShape>
+
+            <VerticalStackLayout Margin="0,35,0,0">
+                <HorizontalStackLayout HorizontalOptions="Center" Spacing="20">
+                    <ImageButton Source="feiis.png" HeightRequest="40" WidthRequest="40" Clicked="ImageButton_Clicked_1"/>
+                    <ImageButton Source="ig.png" HeightRequest="40" WidthRequest="40" Clicked="ImageButton_Clicked"/>
+                    <Image Source="web.png" HeightRequest="40" WidthRequest="40"/>
+                </HorizontalStackLayout>
+
+                <Label Text="Politica de Privacidad" TextColor="White" HorizontalTextAlignment="Center" Margin="15" FontFamily="Nunito" FontAttributes="Bold"/>
+
+            </VerticalStackLayout>
+
+        </Border>
+
+    </Grid>
+
+</ContentPage>
+

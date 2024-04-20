@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Toj.Calorias"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             Title="Calorias">
+
+<Grid RowDefinitions="Auto, Auto, Auto" HorizontalOptions="Center" VerticalOptions="Center">
+        <Border BackgroundColor="white" StrokeThickness="0" HeightRequest="600">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="0,0,60,60"/>
+
+            </Border.StrokeShape>
+
+            <Grid RowDefinitions="Auto, *, Auto">
+                <Grid.Shadow>
+                    <Shadow Brush="black" Offset="10,10" Opacity="0.10" Radius="30"/>
+
+                </Grid.Shadow>
+        <Border BackgroundColor="white" StrokeThickness="0" HeightRequest="500" WidthRequest="350" HorizontalOptions="Center" VerticalOptions="Center"
+                Margin="90">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="70,60,60,60"/>
+
+            </Border.StrokeShape>
+                    <VerticalStackLayout Spacing="18" Padding="40">
+                    <Label Text="TMB" FontSize="40" FontFamily="Nunito" FontAttributes="Bold" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="#6eb6f9"/>
+                    <Label Text="La tasa metabólica basal (TMB) es la cantidad mínima de energía que necesita tu cuerpo para sobrevivir realizando las funciones básicas." FontSize="20" FontFamily="Nunito" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                   <Label Text="Tu TMB es" FontFamily="Nunito" TextColor="black" FontSize="40"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                   <Label x:Name="Result" Text="Result"  TextColor="#6eb6f9" HorizontalOptions="Center" VerticalOptions="Center" FontSize="45" FontFamily="Nunito" FontAttributes="Bold" />
+                                           <Label x:Name="peso" Text="" TextColor="#6eb6f9" HorizontalOptions="Center" VerticalOptions="Center" FontSize="60" FontFamily="Nunito" FontAttributes="Bold" />
+
+                    <!--Link-->
+                    </VerticalStackLayout>
+
+                    
+        </Border>
+
+    </Grid>
+            
+        </Border>
+                                   <ImageButton Source="flechazo" 
+                             HeightRequest="150"
+                             WidthRequest="150"
+                             CornerRadius="30"
+                             BackgroundColor="White"
+                             Padding="20"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"
+                             Grid.Row="6"
+                             Margin="0,0,0,80"/>
+    </Grid>
+</ContentPage>

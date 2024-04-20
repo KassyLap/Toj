@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Toj.Calculando"
+             Shell.NavBarIsVisible="False"
+             Shell.TabBarIsVisible="False"
+             Title="Calculando">
+    <VerticalStackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Image Source="calculando.png" WidthRequest="200"/>
+        <Label Text="Calculando"
+               FontSize="30"
+               FontFamily="Nunito"
+               TextColor="#6eb6f9"
+               FontAttributes="Bold"
+               VerticalTextAlignment="Center"
+               Padding="30"/>
+    </VerticalStackLayout>
+</ContentPage>
